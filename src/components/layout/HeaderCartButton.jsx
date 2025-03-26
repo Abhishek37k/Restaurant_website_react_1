@@ -1,5 +1,5 @@
 import classes from './HeaderCartButton.module.css'
-import CartIcon from '../../cart/CartIcon';
+import CartIcon from './../cart/CartIcon'
 const HeaderCartButton = () => {
   return <>
   <button className={classes.button}>

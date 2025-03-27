@@ -2,7 +2,7 @@ import Header from "./components/layout/Header";
 import Cart from "./components/cart/Cart";
 import { useState } from "react";
 import Meals from "./components/meals/Meals";
-import CartContext from "./components/store/Cart-context";
+import CartProvider from "./components/store/CartProvider";
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
 
@@ -13,13 +13,13 @@ function App() {
     setCartIsShown(false);
   };
   return (
-    <CartContext>
+    <CartProvider>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>
-    </CartContext>
+    </CartProvider>
   );
 }
 
